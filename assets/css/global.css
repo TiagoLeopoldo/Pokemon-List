@@ -1,0 +1,83 @@
+/* Importa fontes do Google (Roboto) e outros estilos externos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /* Fonte usada no projeto */
+@import url('./pokedex.css'); /* Importa os estilos específicos da Pokédex */
+@import url('/assets/css/card.css'); /* Importa estilos relacionados ao card de detalhes */
+
+/* Configurações globais para todos os elementos */
+* {
+  font-family: 'Roboto'; /* Define a fonte padrão como Roboto */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo total de largura/altura */
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: #FF695B; /* Define a cor de fundo principal */
+}
+
+/* Estilo do container principal da aplicação */
+.content {
+  height: 100vh; /* Ocupa toda a altura da janela */
+  width: 100vw; /* Ocupa toda a largura da janela */
+  padding: 1rem; /* Adiciona espaçamento interno */
+  background-color: #FFF; /* Define uma cor de fundo branco para contraste */
+}
+
+/* Estilos para a lista de Pokémon */
+.pokemons {
+  display: grid; /* Layout em grade para organizar os Pokémon */
+  grid-template-columns: repeat(1, 1fr); /* Inicialmente exibe 1 coluna (responsivo) */
+  list-style: none; /* Remove os marcadores padrão da lista */
+  padding: 0; /* Remove o preenchimento interno */
+  margin: 0; /* Remove as margens externas */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.button:hover {
+  transform: scale(1.05); /* Amplia ligeiramente o botão para destaque */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
+  cursor: pointer; /* Indica que o botão é interativo */
+}
+
+/* Efeito ao clicar nos botões */
+.button:active {
+  transform: scale(0.98); /* Reduz o botão para dar sensação de clique */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra reduzida */
+}
+
+/* Estilo responsivo para telas com largura mínima de 380px */
+@media screen and (min-width: 380px) {
+  .pokemons {
+    grid-template-columns: repeat(2, 1fr); /* Ajusta para exibir 2 colunas na lista */
+  }
+}
+
+/* Estilo responsivo para telas com largura mínima de 576px */
+@media screen and (min-width: 576px) {
+  .pokemons {
+    grid-template-columns: repeat(3, 1fr); /* Ajusta para exibir 3 colunas na lista */
+  }
+}
+
+/* Estilo responsivo para telas com largura mínima de 992px */
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px; /* Define uma largura máxima para o container */
+    height: auto; /* Ajusta a altura do container de acordo com o conteúdo */
+    margin: 1rem auto; /* Centraliza o container horizontalmente */
+    border-radius: 1rem; /* Bordas arredondadas para suavidade visual */
+  }
+  .pokemons {
+    grid-template-columns: repeat(4, 1fr); /* Ajusta para exibir 4 colunas na lista */
+  }
+}
+
+/* Estilo responsivo para telas com largura máxima de 1024px */
+@media screen and (max-width: 1024px) {
+  .content {
+    background-color: #FF695B; /* Redefine a cor de fundo para telas menores */
+  }
+
+  .content .img {
+    border-radius: 1rem; /* Adiciona bordas arredondadas às imagens */
+  }
+}

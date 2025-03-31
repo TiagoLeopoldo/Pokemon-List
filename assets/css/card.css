@@ -1,0 +1,106 @@
+/* Estilos principais para o card de informações do Pokémon */
+.card-info {
+  position: fixed; /* Fixa o card na tela */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+  z-index: 1000; /* Garante que o card fique acima de outros elementos */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Orientação vertical */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  max-width: 400px; /* Define uma largura máxima */
+  width: 90%; /* Ajusta a largura para telas menores */
+  background-color: #fff; /* Define a cor de fundo do card */
+  border-radius: 1rem; /* Bordas arredondadas */
+  border: 5px solid transparent; /* Bordas invisíveis que podem ser alteradas dinamicamente */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra externa para destaque */
+  opacity: 0; /* Inicia com o card invisível */
+  transform: translate(-50%, -50%) scale(0.3) rotateY(25deg) rotateX(10deg); /* Animação inicial do card */
+  filter: blur(8px) drop-shadow(0 0 10px rgba(0, 200, 255, 0.6)); /* Efeitos visuais para o card */
+  transition: 
+    opacity 0.6s ease-out, /* Transição suave de visibilidade */
+    transform 0.9s cubic-bezier(0.2, 1.5, 0.5, 1), /* Animação de transformação */
+    filter 0.7s ease, /* Transição suave nos filtros */
+    border-color 0.4s ease; /* Animação da borda */
+}
+
+/* Estilos aplicados quando o card não está oculto */
+.card-info:not(.hidden) {
+  opacity: 1; /* Torna o card visível */
+  transform: translate(-50%, -50%) scale(1) rotateY(0) rotateX(0); /* Reseta as transformações */
+  filter: blur(0) drop-shadow(0 0 0 transparent); /* Remove os efeitos de blur e sombra */
+}
+
+/* Estilos para o cabeçalho do card */
+.card-info .header-card {
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Orientação vertical */
+  align-items: center; /* Centraliza os elementos */
+  justify-content: center; /* Centraliza verticalmente */
+  width: 100%; /* O fundo cobre toda a largura */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 1rem 1rem 0 0; /* Bordas arredondadas apenas no topo */
+  color: #fff; /* Define o texto como branco */
+  background-size: cover; /* A imagem cobre toda a área */
+  background-position: center; /* Centraliza a imagem */
+}
+
+/* Estilo para imagens dentro do cabeçalho */
+.card-info .header-card img {
+  max-width: 100%; /* Ajusta a largura ao tamanho do container */
+  margin-top: 1rem; /* Adiciona um espaçamento superior */
+}
+
+/* Container para os atributos (stats) do Pokémon */
+.stats {
+  width: 100%; /* Preenche toda a largura do card */
+  padding: 1rem; /* Adiciona espaçamento interno */
+}
+
+/* Remove estilos padrão das listas */
+.stats ul {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o espaçamento interno */
+  margin: 0; /* Remove o espaçamento externo */
+}
+
+/* Estilos para cada atributo dentro da lista */
+.stats ul li {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza os itens verticalmente */
+  margin-bottom: 0.8rem; /* Espaçamento entre os atributos */
+}
+
+/* Nome do atributo */
+.stats ul li p {
+  margin: 0; /* Remove margens externas */
+  font-size: 1rem; /* Define o tamanho da fonte */
+  font-weight: bold; /* Aplica peso ao texto */
+  width: 30%; /* Define um espaço fixo para o nome do atributo */
+}
+
+/* Valor numérico do atributo */
+.stats ul li span.stat-value {
+  font-size: 0.9rem; /* Define o tamanho da fonte */
+  font-weight: bold; /* Aplica peso ao texto */
+  margin-left: 0.5rem; /* Espaçamento à esquerda */
+}
+
+/* Barra visual para os atributos */
+.stats ul li .stat-bar {
+  flex-grow: 1; /* A barra ocupa o espaço restante */
+  height: 10px; /* Define a altura fixa */
+  background-color: #ddd; /* Cor de fundo da barra */
+  border-radius: 5px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o limite */
+  position: relative; /* Define a barra como relativa ao container */
+}
+
+/* Preenchimento da barra com cor ajustável */
+.stats ul li .stat-bar span {
+  display: block; /* Define o preenchimento como bloco */
+  height: 100%; /* Ocupa toda a altura da barra */
+  background-color: #4caf50; /* Cor da barra (ajustável) */
+  transition: width 0.4s ease; /* Animação suave para o tamanho da barra */
+}
