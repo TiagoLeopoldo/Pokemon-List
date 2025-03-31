@@ -1,7 +1,7 @@
 /* Importa fontes do Google (Roboto) e outros estilos externos */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /* Fonte usada no projeto */
 @import url('./pokedex.css'); /* Importa os estilos específicos da Pokédex */
-@import url('/assets/css/card.css'); /* Importa estilos relacionados ao card de detalhes */
+@import url('./card.css'); /* Importa estilos relacionados ao card de detalhes */
 
 /* Configurações globais para todos os elementos */
 * {
