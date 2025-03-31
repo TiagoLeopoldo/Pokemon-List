@@ -1,6 +1,6 @@
-# 🕹️ Pokédex Interativa
+# 🕹️ Pokémon List Interativa
 
-Bem-vindo à **Pokédex Interativa**, um projeto desenvolvido para listar e exibir detalhes dos 151 Pokémon originais de forma dinâmica e envolvente! Este projeto utiliza **HTML**, **CSS** e **JavaScript**, com integração à [PokéAPI](https://pokeapi.co/) para buscar os dados dos Pokémon.
+Bem-vindo à **Pokémon List**, um projeto desenvolvido para listar e exibir detalhes dos 151 Pokémon originais de forma dinâmica e envolvente! Este projeto utiliza **HTML**, **CSS** e **JavaScript**, com integração à [PokéAPI](https://pokeapi.co/) para buscar os dados dos Pokémon.
 
 ---
 
@@ -22,36 +22,6 @@ Bem-vindo à **Pokédex Interativa**, um projeto desenvolvido para listar e exib
 
 ---
 
-## 🚀 Como Executar o Projeto
-
-1. Faça o clone do repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/pokedex-interativa.git
-
-
-
-## 📂 Estrutura do Projeto
-
-pokedex-interativa/
-│
-├── assets/
-│   ├── css/
-│   │   ├── global.css       # Estilos globais
-│   │   ├── pokedex.css      # Estilos para a lista de Pokémon
-│   │   └── card.css         # Estilos do card de detalhes
-│   ├── img/                 # Imagens utilizadas no projeto
-│   └── js/
-│       ├── main.js          # Lógica principal do projeto
-│       ├── poke-api.js      # Conexão com a PokéAPI
-│       ├── pokemon-card.js  # Funcionalidades do card de detalhes
-│       └── pokemon-model.js # Modelo de dados dos Pokémon
-│
-├── index.html               # Estrutura principal da aplicação
-└── README.md                # Documentação do projeto
-
-## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
 ## 🧙‍♂️ Desenvolvedor
-Feito com ❤️ por Tiago.
-Siga-me no GitHub!
+Tiago de Noronha Leopoldo.
+Siga-me no [GitHub](https://github.com/TiagoLeopoldo)!
