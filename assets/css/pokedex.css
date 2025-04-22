@@ -1,0 +1,189 @@
+/* Cor de fundo para Pokémon do tipo Normal */
+.normal {
+  background-color: #a6a877;
+}
+
+/* Cor de fundo para Pokémon do tipo Grama */
+.grass {
+  background-color: #77c850;
+}
+
+/* Cor de fundo para Pokémon do tipo Fogo */
+.fire {
+  background-color: #ee7f30;
+}
+
+/* Cor de fundo para Pokémon do tipo Água */
+.water {
+  background-color: #678fee;
+}
+
+/* Cor de fundo para Pokémon do tipo Elétrico */
+.electric {
+  background-color: #f7cf2e;
+}
+
+/* Cor de fundo para Pokémon do tipo Gelo */
+.ice {
+  background-color: #98d5d7;
+}
+
+/* Cor de fundo para Pokémon do tipo Terra */
+.ground {
+  background-color: #dfbf69;
+}
+
+/* Cor de fundo para Pokémon do tipo Voador */
+.flying {
+  background-color: #a98ff0;
+}
+
+/* Cor de fundo para Pokémon do tipo Veneno */
+.poison {
+  background-color: #a040a0;
+}
+
+/* Cor de fundo para Pokémon do tipo Lutador */
+.fighting {
+  background-color: #bf3029;
+}
+
+/* Cor de fundo para Pokémon do tipo Psíquico */
+.psychic {
+  background-color: #f65687;
+}
+
+/* Cor de fundo para Pokémon do tipo Sombrio */
+.dark {
+  background-color: #725847;
+}
+
+/* Cor de fundo para Pokémon do tipo Rocha */
+.rock {
+  background-color: #b8a137;
+}
+
+/* Cor de fundo para Pokémon do tipo Inseto */
+.bug {
+  background-color: #a8b720;
+}
+
+/* Cor de fundo para Pokémon do tipo Fantasma */
+.ghost {
+  background-color: #6e5896;
+}
+
+/* Cor de fundo para Pokémon do tipo Aço */
+.steel {
+  background-color: #b9b7cf;
+}
+
+/* Cor de fundo para Pokémon do tipo Dragão */
+.dragon {
+  background-color: #6f38f6;
+}
+
+/* Cor de fundo para Pokémon do tipo Fada */
+.fairy {
+  background-color: #f9aec7;
+}
+
+/* Estilo da logo principal da lista de Pokémon */
+.pokemonListLogo {
+  max-width: 100%; 
+}
+
+/* Estilo básico para cada Pokémon na lista */
+.pokemon {
+  display: flex; 
+  flex-direction: column;
+  margin: 0.5rem; 
+  padding: 1rem; 
+  border-radius: 1rem; 
+  color: #FFF; 
+}
+
+/* Efeito de hover nos Pokémon (ao passar o mouse) */
+.pokemon:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  cursor: pointer; 
+}
+
+/* Efeito de clique nos Pokémon */
+.pokemon:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Número do Pokémon (ID) */
+.pokemon .number {
+  color: #000; 
+  opacity: .3; 
+  text-align: right;
+  font-size: .625rem; 
+}
+
+/* Nome do Pokémon */
+.pokemon .name {
+  color: #FFF;
+  margin-bottom: .25rem; 
+  text-transform: capitalize; 
+}
+
+/* Detalhes do Pokémon (como tipo e imagem) */
+.pokemon .detail {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between;
+  max-width: 100%; 
+}
+
+/* Lista de tipos do Pokémon */
+.pokemon .detail .types {
+  padding: 0; 
+  margin: 0;
+  list-style: none; 
+  filter: brightness(1.1);
+}
+
+/* Estilo de cada tipo do Pokémon */
+.pokemon .detail .type {
+  color: #FFF; 
+  padding: .25rem .5rem; 
+  margin: .125rem; 
+  font-size: .625rem; 
+  text-align: center;
+  border-radius: 1rem; 
+}
+
+/* Imagem do Pokémon */
+.pokemon .detail img {
+  max-width: 100%;
+  height: auto; 
+  max-height: 70px; 
+  object-fit: contain; 
+  flex-shrink: 1; 
+}
+
+/* Container da paginação */
+.pagination {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  padding: 1rem;
+}
+
+/* Estilo dos botões de paginação */
+.pagination button {
+  background-color: #6c79db; 
+  border: none; 
+  border-radius: 1rem; 
+  color: white;
+  padding: .25rem .5rem; 
+  font-size: .625rem; 
+  margin: .25rem 0; 
+}

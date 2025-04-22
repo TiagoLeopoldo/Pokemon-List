@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+@import url('./pokedex.css'); 
+@import url('/assets/css/card.css');
+
+/* Configurações globais para todos os elementos */
+* {
+  font-family: 'Roboto';
+  box-sizing: border-box; 
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: #FF695B; 
+}
+
+/* Estilo do container principal da aplicação */
+.content {
+  height: 100vh; 
+  width: 100vw;
+  padding: 1rem;
+  background-color: #FFF;
+}
+
+/* Estilos para a lista de Pokémon */
+.pokemons {
+  display: grid; 
+  grid-template-columns: repeat(1, 1fr); 
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.button:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  cursor: pointer; 
+}
+
+/* Efeito ao clicar nos botões */
+.button:active {
+  transform: scale(0.98); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo responsivo para telas com largura mínima de 380px */
+@media screen and (min-width: 380px) {
+  .pokemons {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* Estilo responsivo para telas com largura mínima de 576px */
+@media screen and (min-width: 576px) {
+  .pokemons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilo responsivo para telas com largura mínima de 992px */
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px; 
+    height: auto;
+    margin: 1rem auto; 
+    border-radius: 1rem;
+  }
+  .pokemons {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+/* Estilo responsivo para telas com largura máxima de 1024px */
+@media screen and (max-width: 1024px) {
+  .content {
+    background-color: #FF695B; 
+  }
+
+  .content .img {
+    border-radius: 1rem; 
+  }
+}

@@ -1,0 +1,105 @@
+/* Estilos principais para o card de informações do Pokémon */
+.card-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 5px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Inicia com o card invisível */
+  transform: translate(-50%, -50%) scale(0.3) rotateY(25deg) rotateX(10deg);
+  filter: blur(8px) drop-shadow(0 0 10px rgba(0, 200, 255, 0.6));
+  transition: 
+    opacity 0.6s ease-out,
+    transform 0.9s cubic-bezier(0.2, 1.5, 0.5, 1),
+    filter 0.7s ease,
+    border-color 0.4s ease;
+}
+
+/* Estilos aplicados quando o card não está oculto */
+.card-info:not(.hidden) {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotateY(0) rotateX(0);
+  filter: blur(0) drop-shadow(0 0 0 transparent);
+}
+
+/* Estilos para o cabeçalho do card */
+.card-info .header-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+  margin-top: 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilo para imagens dentro do cabeçalho */
+.card-info .header-card img {
+  max-width: 100%; 
+  margin-top: 1rem; 
+}
+
+/* Container para os atributos (stats) do Pokémon */
+.stats {
+  width: 100%; 
+  padding: 1rem; 
+}
+
+/* Remove estilos padrão das listas */
+.stats ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0; 
+}
+
+/* Estilos para cada atributo dentro da lista */
+.stats ul li {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 0.8rem; 
+}
+
+/* Nome do atributo */
+.stats ul li p {
+  margin: 0; 
+  font-size: 1rem; 
+  font-weight: bold;
+  width: 30%; 
+}
+
+/* Valor numérico do atributo */
+.stats ul li span.stat-value {
+  font-size: 0.9rem; 
+  font-weight: bold; 
+  margin-left: 0.5rem; 
+}
+
+/* Barra visual para os atributos */
+.stats ul li .stat-bar {
+  flex-grow: 1;
+  height: 10px; 
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden; 
+  position: relative;
+}
+
+/* Preenchimento da barra com cor ajustável */
+.stats ul li .stat-bar span {
+  display: block; 
+  height: 100%; 
+  background-color: #4caf50; 
+  transition: width 0.4s ease; 
+}
